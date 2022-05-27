@@ -1,3 +1,3 @@
-module.export = async function handle(msg, client) {
+module.exports = async function(msg, client) {
 
 }
