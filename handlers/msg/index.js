@@ -10,9 +10,9 @@ module.exports = async function(msg, client) {
                   } else {
                            await msg.channel.createMessage({
                                     messageReference: {
-                                             messageID: msg.id
+                                             messageID: msg.id,
+                                             failIfNotExists: false
                                     },
-                                    failIfNotExists: false,
                                     content: "Your brain is not smart enough to do it!"
                            });
                   }
