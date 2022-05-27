@@ -19,11 +19,11 @@
 
          client.on("messageCreate", async(msg) => {
                   msg.guild = msg.channel.guild;
-                  require("./handlers/msg/")(msg, client);
+                  require("./handlers/msg/index.js")(msg, client);
          });
 
          client.on("interactionCreate", async(i) => {
                   i.guild = i.channel.guild;
-                  require("./handlers/interaction/")(i, client);
+                  require("./handlers/interaction/index.js")(i, client);
          });
 })()
