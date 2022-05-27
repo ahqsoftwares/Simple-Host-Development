@@ -20,7 +20,7 @@ module.exports = async function(i, client) {
                                     type: 1
                            },
                            {
-                                    id: "979799136117338133",
+                                    id: "979034198105006111",
                                     allow: 518349388881
                            },
                            {
@@ -33,7 +33,7 @@ module.exports = async function(i, client) {
                            content: `Your support ticket:- <#${ch.id}>`
                   });
                   await ch.createMessage({
-                           content: `<@&979799136117338133>\nWelcome <@!${i.member.user.id}> to your support ticket!\nPlease describe your query as the staffs come to help you!`,
+                           content: `<@&979034198105006111>\nWelcome <@!${i.member.user.id}> to your support ticket!\nPlease describe your query as the staffs come to help you!`,
                            embeds: [],
                            components: []
                   });
