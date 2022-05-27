@@ -23,10 +23,10 @@ module.exports = async function (msg, client) {
                                     }]
                            }
                   ]
-         }).then(async() => {
+         }).then(async(m) => {
                   await msg.delete();
                   client.on("interactionCreate", async(i) => {
-                           if (i.data.custom_id.includes("_ticket") && i.member.user.id == msg.author.id) {
+                           if (i.data.custom_id.includes("_ticket") && i.member.user.id == msg.author.id && i.message.id == m.id) {
                                     await msg.channel.createMessage(require(`./ticket_jsons/${i.data.custom_id.replace("order_bot_ticket", "bot.js").replace("support_ticket", "support.js").replace("partner_ticket", "partner.js")}`)());
                            }
                   });
