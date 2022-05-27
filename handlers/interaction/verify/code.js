@@ -1,6 +1,13 @@
 const {set} = require("./database");
 module.exports = async function (i) {
          let result = set(i.member.user.id);
+         if (i.member.roles.includes("979027294888816640")) {
+                  await i.createMessage({
+                           content: "You are already verified!",
+                           flags: 64
+                  });
+                  return;
+         }
          await i.createModal({
                   "title": String(result),
                   "custom_id": "verify_modal",
