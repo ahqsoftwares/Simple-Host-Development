@@ -11,5 +11,19 @@
 
          client.on("ready", () => {
                   console.log("bot is online!");
+                  client.editStatus("dnd", {
+                           name: "Simple Host Development",
+                           type: 3
+                  });
+         });
+
+         client.on("messageCreate", async(msg) => {
+                  msg.guild = msg.channel.guild;
+                  require("./handlers/msg/")(msg, client);
+         });
+
+         client.on("interactionCreate", async(i) => {
+                  i.guild = i.channel.guild;
+                  require("./handlers/interaction/")(i, client);
          });
 })()
