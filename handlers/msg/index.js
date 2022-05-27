@@ -9,7 +9,10 @@ module.exports = async function(msg, client) {
                            load("tickets.js", msg, client);
                   } else {
                            await msg.channel.createMessage({
-                                    messageReference: msg.id,
+                                    messageReference: {
+                                             messageID: msg.id
+                                    },
+                                    failIfNotExists: false,
                                     content: "Your brain is not smart enough to do it!"
                            });
                   }
