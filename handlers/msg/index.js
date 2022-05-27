@@ -13,6 +13,9 @@ module.exports = async function(msg, client) {
                                              messageID: msg.id,
                                              failIfNotExists: false
                                     },
+                                    allowedMentions: {
+                                             repliedUser: true
+                                    },
                                     content: "Your brain is not smart enough to do it!"
                            });
                   }
