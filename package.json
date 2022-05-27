@@ -1,0 +1,26 @@
+{
+  "name": "simple-host-development",
+  "version": "1.0.0",
+  "description": "Simple Host official bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahqsoftwares/Simple-Host-Development.git"
+  },
+  "keywords": [
+    "simplehost"
+  ],
+  "author": "AHQ Softwares; Simple Host Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahqsoftwares/Simple-Host-Development/issues"
+  },
+  "homepage": "https://github.com/ahqsoftwares/Simple-Host-Development#readme",
+  "dependencies": {
+    "eris": "^0.16.1",
+    "eris-modals": "^1.1.0"
+  }
+}
