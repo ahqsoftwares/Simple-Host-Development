@@ -1,7 +1,7 @@
 module.exports = async function(i, client) {
-         await i.acknowledge(64);
+         await i.defer(64);
          if (i.guild.channels.some(ch => ch.name == `partner-${i.member.user.id}`)) {
-                  await i.editParent({
+                  await i.editOriginalMessage({
                            content: "You already have a partnership ticket!"
                   });
                   return;
@@ -29,7 +29,7 @@ module.exports = async function(i, client) {
                            }
                   ]
          }).then(async(ch) => {
-                  await i.editParent({
+                  await i.editOriginalMessage({
                            content: `Your partnership ticket:- <#${ch.id}>`
                   });
                   await ch.createMessage({
