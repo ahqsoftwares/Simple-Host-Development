@@ -1,8 +1,7 @@
 (async() => {
-         const eris = require("eris");
+         const eris = require("./node_modules/eris");
          const process = require("process");
          process.on("uncaughtException", console.log);
-         require("eris-modals")(eris);
 
          const client = new eris(process.env.token, {
                   intents: ["all"]
