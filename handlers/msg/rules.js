@@ -23,7 +23,7 @@ General Rules
 Text Channel Rules
 :speech_balloon: No @mentioning the mods.
 :speech_balloon: No asking to be granted roles/moderator roles.
-:speech_balloon: Contact the staffs only in 💼・staff-support for any support/complaints.
+:speech_balloon: Contact the staffs only in <#979063598099869816> for any support/complaints.
 :speech_balloon: No @mentioning spam.
 :speech_balloon: No sexually explicit, NSFW, pornographic content.
 :speech_balloon: No sexism.
