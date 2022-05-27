@@ -1,6 +1,6 @@
 module.exports = async function(i, client) {
          await i.acknowledge(64);
-         if (i.guild.channes.some(ch => ch.name == `partner-${i.member.user.id}`)) {
+         if (i.guild.channels.some(ch => ch.name == `partner-${i.member.user.id}`)) {
                   await i.editParent({
                            content: "You already have a partnership ticket!"
                   });
