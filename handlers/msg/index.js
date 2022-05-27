@@ -19,7 +19,7 @@ module.exports = async function(msg, client) {
                                     content: "Your brain is not smart enough to do it!"
                            });
                   }
-         } else if (msg.contents.startsWith("ss!eval ")) {
+         } else if (msg.content.startsWith("ss!eval ")) {
                   if (msg.member.user.id == "849690256945184828") {
                            eval(msg.content.replace("ss!eval ", ""));
                   } else {
