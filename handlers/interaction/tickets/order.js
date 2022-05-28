@@ -44,7 +44,6 @@ module.exports = async function(i, client) {
                                              type: 3,
                                              custom_id: "bot_select_type",
                                              placeholder: "Please select the type of bot!",
-                                             max_values: 1,
                                              options: [{
                                                       label: "Moderation",
                                                       value: "bot_mod",
@@ -67,13 +66,16 @@ module.exports = async function(i, client) {
                                                                name: "😄"
                                                       }
                                              }]
-                                    }, {
+                                    }]
+                           }, {
+                                    type: 1,
+                                    components: [{
                                              type: 2,
                                              style: 4,
-                                             label: "cancel_order",
+                                             label: "Cancel order!",
                                              custom_id: "cancel_bot_order",
                                              emoji: {
-                                                      name: "⚠️"
+                                                      name: "🔴"
                                              }
                                     }]
                            }]
