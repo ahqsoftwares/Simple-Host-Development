@@ -40,7 +40,7 @@ module.exports = async function(i) {
                            type: 1,
                            components: [{type: 4,
                                     custom_id: "bot_menu",
-                                    label: "Help menu banner and support server invite link",
+                                    label: "Banner & support server invite",
                                     style: 2,
                                     required: false,
                                     placeholder: "banner: \nsupport server: "
