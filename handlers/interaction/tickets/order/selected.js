@@ -27,7 +27,10 @@ module.exports = async function(i) {
                                     style: 1,
                                     label: "Bot id!",
                                     required: true,
-                                    placeholder: String(i.member.user.id)}]
+                                    placeholder: String(i.member.user.id),
+                                    min_length: String(i.member.user.id).length,
+                                    max_length: String(i.member.user.id).length
+                           }]
                   }, {
                            type: 1,
                            components: [{type: 4,

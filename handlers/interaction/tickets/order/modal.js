@@ -60,7 +60,7 @@ module.exports = async function(i) {
                   embeds: [{
                            color: require("../../../colors").GREEN,
                            title: "Order details!",
-                           description: `Type of bot ${get(i.member.user.id)}`,
+                           description: `Type of bot **${get(i.member.user.id).replace("bot_", "")}**`,
                            fields: [{
                                     name: "Bot name",
                                     value: `${data.name}`,
