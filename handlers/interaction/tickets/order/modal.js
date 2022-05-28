@@ -14,6 +14,7 @@ module.exports = async function(i) {
                   status: i.data.components[3].components[0].value || "No value was provided!",
                   banner: i.data.components[3].components[0].value || "No value was provided!",
          });
+         console.log(getD(i.member.user.id));
          await i.editParent({
                   embeds: [{
                            title: "Order Placed!",
