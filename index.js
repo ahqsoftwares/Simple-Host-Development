@@ -1,5 +1,5 @@
 (async() => {
-         const eris = require("./node_modules/eris");
+         const eris = require("./modules/eris");
          const process = require("process");
          process.on("uncaughtException", console.log);
 

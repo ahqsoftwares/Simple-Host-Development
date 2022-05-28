@@ -34,8 +34,49 @@ module.exports = async function(i, client) {
                   });
                   await ch.createMessage({
                            content: `Welcome <@!${i.member.user.id}> to your bot order ticket!`,
-                           embeds: [],
-                           components: []
+                           embeds: [{
+                                    title: "Your Order has started now!",
+                                    description: "Please select the type of your order!"
+                           }],
+                           components: [{
+                                    type: 1,
+                                    components: [{
+                                             type: 3,
+                                             custom_id: "bot_select_type",
+                                             placeholder: "Please select the type of bot!",
+                                             max_values: 1,
+                                             options: [{
+                                                      label: "Moderation",
+                                                      value: "bot_mod",
+                                                      description: "I'll order a moderation bot!",
+                                                      emoji: {
+                                                               name: "⚙️"
+                                                      }
+                                             }, {
+                                                      label: "Economy",
+                                                      value: "bot_eco",
+                                                      description: "I'll order an economy bot like owo!",
+                                                      emoji: {
+                                                               name: "💰"
+                                                      }
+                                             }, {
+                                                      label: "Fun",
+                                                      value: "bot_fun",
+                                                      description: "I'll order a fun and games bot!",
+                                                      emoji: {
+                                                               name: "😄"
+                                                      }
+                                             }]
+                                    }, {
+                                             type: 2,
+                                             style: 4,
+                                             label: "cancel_order",
+                                             custom_id: "cancel_bot_order",
+                                             emoji: {
+                                                      name: "⚠️"
+                                             }
+                                    }]
+                           }]
                   });
          });
 }
