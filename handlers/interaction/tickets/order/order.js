@@ -75,7 +75,7 @@ module.exports = async function(i) {
                                              label: "Cancel order!",
                                              custom_id: "cancel_bot_order",
                                              emoji: {
-                                                      name: "🔴"
+                                                      name: "🛑"
                                              }
                                     }]
                            }]

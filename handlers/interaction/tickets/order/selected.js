@@ -1,5 +1,12 @@
 const {set} = require("../database/orders/index");
 module.exports = async function(i) {
+         if (!(i.channel.name == `order-${i.member.user.id}`)) {
+                  await i.createMessage({
+                           content: "Its not for  you!",
+                           flags: 64
+                  });
+                  return;
+         }
          set(i.member.user.id, i.data.values[0]);
          await i.createModal({
                   custom_id: "bot_ask_questions",
