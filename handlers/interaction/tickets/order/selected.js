@@ -40,17 +40,10 @@ module.exports = async function(i) {
                            type: 1,
                            components: [{type: 4,
                                     custom_id: "bot_menu",
-                                    label: "Help menu url",
-                                    style: 1,
-                                    required: false}]
-                  }, {
-                           type: 1,
-                           components: [{
-                                    type: 4,
-                                    custom_id: "bot_helpmenu",
-                                    style: 1,
-                                    label: "Help menu invite link",
-                                    required: false
+                                    label: "Help menu banner and support server invite link",
+                                    style: 2,
+                                    required: false,
+                                    placeholder: "banner: \nsupport server: "
                            }]
                   }]
          });
