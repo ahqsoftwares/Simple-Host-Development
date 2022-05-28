@@ -75,11 +75,11 @@ module.exports = async function(i) {
                                     inline: true
                            }, {
                                     name: "Bot status",
-                                    value: `${bot.status}`,
+                                    value: `${data.status}`,
                                     inline: true
                            }, {
                                     name: "Support server invite / banner url",
-                                    value: `${bot.banner}`,
+                                    value: `${data.banner}`,
                                     inline: true
                            }]
                   }],
