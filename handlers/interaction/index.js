@@ -11,7 +11,7 @@ module.exports = async function(i, client) {
                   require("./tickets/support")(i, client);
          } else if (i.data.custom_id.startsWith("cancel_bot_order")) {
                   if (i.data.custom_id.includes("admin")) {
-                           if (!i.member.roles.has("979033028020023317")) {
+                           if (!i.member.roles.includes("979033028020023317")) {
                                     await i.createMessage({
                                              content: "You are not authorised to do it! Ask a staff member to close it with a valid reason!",
                                              flags: 64
