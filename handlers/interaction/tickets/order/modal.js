@@ -42,18 +42,7 @@ module.exports = async function(i) {
                            description: "The order was placed successfully!\nOur Devs will reply back to youe order soon!",
                            color: require("../../../colors").GREEN
                   }],
-                  components: [{
-                           type: 1,
-                           components: [{
-                                    type: 2,
-                                    style: 4,
-                                    label: "Cancel order",
-                                    custom_id: "cancel_bot_order_admin",
-                                    emoji: {
-                                             name: "🛑"
-                                    }
-                           }]
-                  }]
+                  components: []
          });
          await i.channel.createMessage({
                   content: `<@&979761117846990878> New order!`,
