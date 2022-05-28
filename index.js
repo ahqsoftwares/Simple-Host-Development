@@ -1,12 +1,13 @@
 (async() => {
          const eris = require("./modules/eris");
          const process = require("process");
-         process.on("uncaughtException", console.log);
+         process.on("uncaughtException", (e) => console.log(e));
 
          const client = new eris(process.env.token, {
                   intents: ["all"]
          });
          client.connect()
+         client.on("error", (e) => console.log(e));
 
          client.on("ready", () => {
                   console.log("bot is online!");

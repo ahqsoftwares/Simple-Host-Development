@@ -40,10 +40,10 @@ module.exports = async function(i) {
                            type: 1,
                            components: [{ type: 4,
                                     custom_id: "bot_status",
-                                    label: "Status type and name",
+                                    label: "Bot Status, type and name",
                                     style: 2,
                                     required: false,
-                                    placeholder: "Type: Playing\nName: Simple Host Development"}]
+                                    placeholder: "Status: Idle\nType: Playing\nName: Simple Host Development"}]
                   }, {
                            type: 1,
                            components: [{type: 4,
