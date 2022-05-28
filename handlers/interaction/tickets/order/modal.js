@@ -19,6 +19,18 @@ module.exports = async function(i) {
                            title: "Order Placed!",
                            description: "The order was placed successfully!\nOur Devs will reply back to youe order soon!",
                            color: require("../../../colors").GREEN
+                  }],
+                  components: [{
+                           type: 1,
+                           components: [{
+                                    type: 2,
+                                    style: 4,
+                                    label: "Cancel order",
+                                    custom_id: "cancel_bot_order",
+                                    emoji: {
+                                             name: "🛑"
+                                    }
+                           }]
                   }]
          });
 }
