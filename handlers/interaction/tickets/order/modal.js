@@ -1,4 +1,4 @@
-const {get, getE, getD, setD} = require("../database/orders/index");
+const {get, getD, setD} = require("../database/orders/index");
 module.exports = async function(i) {
          if (!(i.channel.name == `order-${i.member.user.id}`)) {
                   await i.createMessage({
@@ -35,7 +35,7 @@ module.exports = async function(i) {
                            }
                   ]
          });
-         let data = get(i.member.user.id);
+         let data = getD(i.member.user.id);
          await i.editParent({
                   embeds: [{
                            title: "Order Placed!",
