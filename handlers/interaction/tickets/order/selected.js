@@ -1,4 +1,4 @@
-const {set} = require("../database/orders/index");
+const {set, setE} = require("../database/orders/index");
 module.exports = async function(i) {
          if (!(i.channel.name == `order-${i.member.user.id}`)) {
                   await i.createMessage({
@@ -8,6 +8,7 @@ module.exports = async function(i) {
                   return;
          }
          set(i.member.user.id, i.data.values[0]);
+         setE(i.member.user.id, i.message);
          await i.createModal({
                   custom_id: "bot_ask_questions",
                   title: "Please give us some info about your bot!",

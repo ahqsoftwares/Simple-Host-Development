@@ -36,7 +36,8 @@ module.exports = async function(i) {
                            content: `Welcome <@!${i.member.user.id}> to your bot order ticket!`,
                            embeds: [{
                                     title: "Your Order has started now!",
-                                    description: "Please select the type of your order!"
+                                    description: "Please select the type of your order!",
+                                    color: require("../../../colors").YELLOW
                            }],
                            components: [{
                                     type: 1,

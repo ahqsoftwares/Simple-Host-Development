@@ -1,5 +1,6 @@
 let type = {};
 let otherData = {};
+let msg = {};
 module.exports = {
          set: function(id, value) {
                   type[id] = value;
@@ -12,5 +13,11 @@ module.exports = {
          },
          getD: function(id) {
                   return otherData[id];
+         },
+         setE: function(id, value) {
+                  msg[id] = value;
+         },
+         getE: function(id) {
+                  return msg[id];
          }
 }
