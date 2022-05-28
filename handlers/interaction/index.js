@@ -22,5 +22,6 @@ module.exports = async function(i, client) {
                   require("./tickets/order/selected")(i)
          } else if (i.data.custom_id == "bot_ask_questions") {
                   console.log(i.data);
+                  require("./tickets/order/modal")(i);
          }
 }
