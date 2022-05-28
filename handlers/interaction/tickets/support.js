@@ -35,7 +35,18 @@ module.exports = async function(i, client) {
                   await ch.createMessage({
                            content: `<@&979034198105006111>\nWelcome <@!${i.member.user.id}> to your support ticket!\nPlease describe your query as the staffs come to help you!`,
                            embeds: [],
-                           components: []
+                           components: [{
+                                    type: 1,
+                                    components: [{
+                                             type: 2,
+                                             style: 4,
+                                             label: "Close support ticket!",
+                                             custom_id: "cancel_bot_order_admin",
+                                             emoji: {
+                                                      name: "🛑"
+                                             }
+                                    }]
+                           }]
                   });
          });
 }

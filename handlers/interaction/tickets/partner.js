@@ -35,7 +35,18 @@ module.exports = async function(i, client) {
                   await ch.createMessage({
                            content: `Welcome <@!${i.member.user.id}> to your partnership application!`,
                            embeds: [],
-                           components: []
+                           components: [{
+                                    type: 1,
+                                    components: [{
+                                             type: 2,
+                                             style: 4,
+                                             label: "Cancel partnership!",
+                                             custom_id: "cancel_bot_order",
+                                             emoji: {
+                                                      name: "🛑"
+                                             }
+                                    }]
+                           }]
                   });
          });
 }
