@@ -11,16 +11,25 @@ module.exports = async function(i, client) {
                   require("./tickets/support")(i, client);
          } else if (i.data.custom_id.startsWith("cancel_bot_order")) {
                   if (i.data.custom_id.includes("admin")) {
-                           if (!i.member.roles.includes("979033028020023317")) {
+                           if (!i.member.roles.includes("979761117846990878")) {
                                     await i.createMessage({
-                                             content: "You are not authorised to do it! Ask a staff member to close it with a valid reason!",
+                                             content: "You are not authorised to do it! Ask a dev to close it!",
+                                             flags: 64
+                                    });
+                                    return;
+                           }
+                  }
+                  if (i.data.custom_id.includes("support")) {
+                           if (!i.member.roles.includes("979034198105006111")) {
+                                    await i.createMessage({
+                                             content: "You are not authorised to close a support ticket! Ask a support team member to close it!",
                                              flags: 64
                                     });
                                     return;
                            }
                   }
                            await i.editParent({
-                                    content: "Your order has been cancelled!\nTicket deleting in 20 seconds!",
+                                    content: "Cancelled!\nTicket deleting in 20 seconds!",
                                     embeds: [],
                                     components: []
                            });

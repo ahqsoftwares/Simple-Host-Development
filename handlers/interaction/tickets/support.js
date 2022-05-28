@@ -41,7 +41,7 @@ module.exports = async function(i, client) {
                                              type: 2,
                                              style: 4,
                                              label: "Close support ticket!",
-                                             custom_id: "cancel_bot_order_admin",
+                                             custom_id: "cancel_bot_order_support",
                                              emoji: {
                                                       name: "🛑"
                                              }
