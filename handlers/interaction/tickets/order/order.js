@@ -1,4 +1,4 @@
-module.exports = async function(i, client) {
+module.exports = async function(i) {
          await i.defer(64);
          if (i.guild.channels.some(ch => ch.name == `order-${i.member.user.id}`)) {
                   await i.editOriginalMessage({
