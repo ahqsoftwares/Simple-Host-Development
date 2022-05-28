@@ -20,5 +20,7 @@ module.exports = async function(i, client) {
                   }, 20 * 1000);
          } else if (i.data.custom_id == "bot_select_type") {
                   require("./tickets/order/selected")(i)
+         } else if (i.data.custom_id == "bot_ask_questions") {
+                  console.log(i.data);
          }
 }
