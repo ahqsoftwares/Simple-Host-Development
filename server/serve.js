@@ -38,8 +38,11 @@
                   });
          });
          app.get("/add", async(req, res) => {
-                  if (req.query.author == password) {
-
+                  if (req.query.author != password) {
+                           res.send({
+                                    type: "Error"
+                           });
+                           return
                   }
                   if (!(req.query.code || req.query.user)) {
                            res.send({
