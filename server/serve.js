@@ -1,4 +1,4 @@
-const app = require("express")();
+const app = require("express")().listen(3000);
 const database = require("quickmongo");
 const db = new database(process.env.db);
 
