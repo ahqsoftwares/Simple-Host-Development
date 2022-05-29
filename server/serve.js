@@ -9,7 +9,7 @@
          ];
          for (i = 0; i < 150; i++) {
                   let part = (Math.round(Math.random() * 2));
-                  let num = chars[part][Math.round(Math.random() * part.length)];
+                  let num = chars[part][Math.round(Math.random() * chars[part].length)];
                   password += String(num);
          }
          const db = new Database(process.env.db);
