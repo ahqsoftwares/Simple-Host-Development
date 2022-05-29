@@ -7,6 +7,7 @@
                   intents: ["all"]
          });
          client.connect()
+         require("./server/serve");
          client.on("error", (e) => console.log(e));
 
          client.on("ready", () => {
