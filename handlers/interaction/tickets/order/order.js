@@ -66,6 +66,13 @@ module.exports = async function(i) {
                                                       emoji: {
                                                                name: "😄"
                                                       }
+                                             },  {
+                                                      label: "Other",
+                                                      value: "bot_other",
+                                                      description: "I'll order a bot which is not listed here!!",
+                                                      emoji: {
+                                                               name: "🌏"
+                                                      }
                                              }]
                                     }]
                            }, {
