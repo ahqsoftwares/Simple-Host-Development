@@ -36,9 +36,8 @@
                   res.send({
                            type: "License Confirmed"
                   });
-         });
-         app.get("/add", async(req, res) => {
-                  console.log(req.query.author, password);
+         })
+         .get("/add", async(req, res) => {
                   if (req.query.author != password) {
                            res.send({
                                     type: "Error"
@@ -60,6 +59,31 @@
                            db.set(req.query.user, req.query.code);
                            await res.send({
                                     code: req.query.code
+                           });
+                  }
+         })
+         .get("/remove", async(req, res) => {
+                  if (req.query.author != password) {
+                           res.send({
+                                    type: "Error"
+                           });
+                           return
+                  }
+                  if (!(req.query.user)) {
+                           res.send({
+                                    type: "Error",
+                                    desc: "Invalid args!"
+                           });
+                           return;
+                  }
+                  if (await(db.has(req.query.user))) {
+                           await db.delete(req.query.user);
+                           await res.send({
+                                    code: "Success!"
+                           });
+                  } else {
+                           await res.send({
+                                    code: "Error! Member doesn't exist"
                            });
                   }
          });
