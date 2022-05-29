@@ -12,7 +12,7 @@ module.exports = async function(i) {
                   id: i.data.components[1].components[0].value,
                   embed: i.data.components[2].components[0].value || "Random color every time!",
                   status: i.data.components[3].components[0].value || "No status",
-                  banner: i.data.components[3].components[0].value || "No banner/support server invite url was not provided!",
+                  banner: i.data.components[4].components[0].value || "No banner/support server invite url was not provided!",
          });
          await i.channel.edit({
                   permissionOverwrites: [
