@@ -39,7 +39,7 @@ module.exports = async function(i) {
          await i.editParent({
                   embeds: [{
                            title: "Order Placed!",
-                           description: "The order was placed successfully!\nOur Devs will reply back to youe order soon!",
+                           description: "The order was placed successfully!\nOur Devs will reply back to your order soon!",
                            color: require("../../../colors").GREEN
                   }],
                   components: []
