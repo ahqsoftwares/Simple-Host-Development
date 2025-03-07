@@ -1,1 +1,2 @@
-REUSING THE CODE MORE THAN 20% OR MAKING FORKS FOR YOUR OWN USE IS STRICTLY PROHIBITED
+# N.B.
+If it doesn't make sense yet, the project's unmaintained for years. :P
